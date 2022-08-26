@@ -84,13 +84,24 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var suma=0;
+  for(var i=0;i<numeros.length;i++){
+    suma = numeros[i] + suma;
+  }
+  return suma
 }
 
 
-function promedioResultadosTest(resultadosTest) {
+function promedioResultadosTest(numeros) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
-  // Tu código:
+  // Tu código:var suma=0;
+  var suma=0;
+  for(var i=0;i<numeros.length;i++){
+    suma = numeros[i] + suma;
+    var cant=numeros.length;
+  }
+  return (suma / cant);
 }
 
 
@@ -98,20 +109,40 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var cont = 0;
+  for(var i=0;i<numeros.length;i++){
+    if(cont>numeros[i]){
+      cont=numeros[i];
+    }
+  }
+  return cont
 }
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
-  // Escribe tu código aquí:
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Escribe tu código aquí:var suma=0;
+  if(arguments<1)
+    return 0;
+  var suma=1;
+  for(var i=0;i<arguments.length;i++){
+    suma = suma * arguments[i];
+  }
+  return suma;
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  let contador = 0;
+  for (let i = 0; i < arreglo.length ; i++) {
+    if(arreglo[i] > 18){
+      contador++
+    }
+  }
+  return contador
 }
 
 
@@ -119,8 +150,12 @@ function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquí
+  if(numeroDeDia===1 || numeroDeDia===7){
+    return "Es fin de semana";
+  }else{
+    return "Es dia de semana"
+  }
 } 
 
 
@@ -129,6 +164,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   
+  
 }
 
 
@@ -136,7 +172,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  for (var i =0 ; i < arreglo.length - 1; i++) {
+    if(arreglo[i] !== arreglo[i+1]){
+      return false
+    }
+  }
+  return true
 } 
 
 
