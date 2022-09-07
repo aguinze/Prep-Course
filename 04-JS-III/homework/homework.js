@@ -59,10 +59,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var suma="";
-  for(var i=0;i<palabras.length;i++){
-    suma=suma+i
-  }
+  var suma=palabras.join(" ");
   return suma
 }
 
@@ -109,9 +106,9 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  var cont = 0;
+  var cont = numeros[0];
   for(var i=0;i<numeros.length;i++){
-    if(cont>numeros[i]){
+    if(numeros[i]>cont){
       cont=numeros[i];
     }
   }
@@ -132,7 +129,7 @@ function multiplicarArgumentos() {
   return suma;
 }
 
-
+ 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
