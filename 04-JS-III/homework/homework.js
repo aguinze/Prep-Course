@@ -229,8 +229,10 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
   var newarray=[];
+  var num=numero
   for(var i=0;i<10;i++){
-    newarray.push(numero+2)
+    newarray.push(num)
+ 
   }
   return newarray
  }
@@ -241,9 +243,16 @@ function continueStatement(numero) {
   //Devolver el array
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
-  // Tu código:
-}
-
+  // Tu código: 
+  var num=numero;
+  var suma=0
+  var newarray=[];
+  for(var i = 0; i<10; i++ ){
+      newarray.push(num+suma);
+      suma=suma + 2;
+    }
+    return newarray
+  }
 
 // No modificar nada debajo de esta línea
 // --------------------------------
