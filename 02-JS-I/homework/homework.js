@@ -100,7 +100,7 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num%2===0;
+  return num%2===1;
 }
 
 function elevarAlCuadrado(num) {
@@ -125,13 +125,13 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return num.round;
+  return Math.round(num);ñ
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return num.ceil;
+  return Math.ceil(num);
 }
 
 function numeroRandom() {
@@ -145,17 +145,17 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if(num===0){
+  if(numero===0){
     return false;
-  }else if(numero%2===0){
+  }if(numero>0){
     return "Es positivo"
   }else{
-    "Es negativo"
+    return "Es negativo"
   }
 }
 
 function agregarSimboloExclamacion(str) {
-  // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
+  // Agrega un símbolo de exclamación al final de la string "str" y devuelve unakkkkkk nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
   return str+"!";
@@ -186,7 +186,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aqui:
-return lado*lado;
+return lado*4;
 }
 
 
@@ -194,7 +194,6 @@ function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí:
   return (base*altura)/2;
-
 }
 
 
